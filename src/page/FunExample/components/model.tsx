@@ -1,9 +1,6 @@
 import { Html, useGLTF } from '@react-three/drei';
-
 const ComputedModle = () => {
-  const model = useGLTF(
-    '/models/macbook.gltf'
-  );
+  const model = useGLTF('/models/macbook.gltf');
   return (
     <primitive position-y={-1.3} object={model.scene}>
       <Html
@@ -18,8 +15,6 @@ const ComputedModle = () => {
     </primitive>
   );
 };
-useGLTF.preload(
-  'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf'
-);
+useGLTF.preload('/models/macbook.gltf');
 
 export default ComputedModle;

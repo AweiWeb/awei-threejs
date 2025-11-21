@@ -5,7 +5,7 @@ const CyberTruck = () => {
   const cyber = useGLTF('/models/cybtruck.gltf');
   return (
     <RigidBody colliders="hull" mass={50}>
-      <primitive object={cyber.scene} scale={0.8}/>;
+      <primitive object={cyber.scene} scale={0.8} />
     </RigidBody>
   );
 };

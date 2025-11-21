@@ -5,12 +5,17 @@ import { Leva } from 'leva';
 const PhysicsExample = () => {
   return (
     <>
-      <Leva />
+      {/* <Leva /> */}
       <Canvas
         dpr={[1, 2]}
         shadows
         gl={{ antialias: true }}
-        camera={{ fov: 45, near: 0.1, far: 100, position: [5, 6, 15] }}
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 100,
+          position: [5, 6, 15],
+        }}
       >
         <Home />
         <OrbitControls makeDefault />

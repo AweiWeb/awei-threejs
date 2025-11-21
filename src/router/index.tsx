@@ -13,26 +13,62 @@ import FunExample from '@/page/FunExample/index';
 import PhysicsExample from '@/page/Physics/index';
 import gameExample from '@/page/gameExample/index';
 import JourneyGame from '@/page/awei-study-Game/index';
-const router = createBrowserRouter([
+import R3f from '@/page/r3f';
+import R3fGame1 from '@/page/r3f-game1';
+
+const loaderData = (): any => {
+  console.log('我是数据');
+};
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        { index: true, Component: Fiber1 },
+        { path: 'fiber1', Component: Fiber1 },
+        { path: 'fiber2', Component: Fiber2 },
+        { path: 'fiber3', Component: Fiber3 },
+        { path: 'env', Component: EnvExample },
+        { path: 'model', Component: LoadModel },
+        { path: 'text', Component: TextDebug },
+        { path: 'glsl', Component: GlslExample },
+        { path: 'event', Component: MouseEventPage },
+        { path: 'processing', Component: ProcessingExample },
+        { path: 'fun', Component: FunExample },
+        {
+          path: 'phy',
+          lazy: async () => {
+            console.log('lazy');
+            const model = await import('@/page/Physics/index');
+            console.log(model.default);
+
+            return { Component: model.default };
+          },
+          hydrateFallbackElement: <div>Loading Physics...</div>, //异步加载显示组件
+        },
+        { path: 'game', Component: gameExample },
+        { path: 'end', Component: JourneyGame },
+        {
+          path: 'r3f',
+          Component: R3f,
+          loader: loaderData,
+          children: [
+            {
+              path: 'game1',
+              Component: R3fGame1,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <App />,
-    children: [
-      { index: true, Component: Fiber1 },
-      { path: 'fiber1', Component: Fiber1 },
-      { path: 'fiber2', Component: Fiber2 },
-      { path: 'fiber3', Component: Fiber3 },
-      { path: 'env', Component: EnvExample },
-      { path: 'model', Component: LoadModel },
-      { path: 'text', Component: TextDebug },
-      { path: 'glsl', Component: GlslExample },
-      { path: 'event', Component: MouseEventPage },
-      { path: 'processing', Component: ProcessingExample },
-      { path: 'fun', Component: FunExample },
-      { path: 'phy', Component: PhysicsExample },
-      { path: 'game', Component: gameExample },
-      { path: 'end', Component: JourneyGame },
-    ],
-  },
-]);
+    future: {
+      unstable_middleware: true, //开启中间件
+    },
+  }
+);
+
 export default router;

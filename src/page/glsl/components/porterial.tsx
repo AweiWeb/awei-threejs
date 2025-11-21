@@ -9,7 +9,7 @@ import portalerVertex from '@/shader/shader-porterial/vertex.glsl';
 import portalerFragment from '@/shader/shader-porterial/fragment.glsl';
 import { extend, useFrame, Object3DNode } from '@react-three/fiber';
 import { useRef } from 'react';
-console.log(11111); //懒加载时会执行
+// console.log(11111); //懒加载时会执行
 const PortShaderMaterial = shaderMaterial(
   {
     uTime: 0,

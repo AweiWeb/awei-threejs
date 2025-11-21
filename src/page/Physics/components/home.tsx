@@ -56,6 +56,7 @@ const Home = () => {
     const angle = time * 0.5;
     const x = Math.cos(angle);
     const z = Math.sin(angle);
+    if(gunzi.current)
     gunzi.current.setNextKinematicTranslation({ x, y: 0, z });
     // console.log(cubeRef.current);
   });

@@ -1,9 +1,12 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router';
 
 const App = () => {
   return (
     <>
-      <Outlet />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
