@@ -17,7 +17,7 @@ const Fun = () => {
         <boxGeometry />
         <meshNormalMaterial />
       </mesh> */}
-      <Suspense>
+      <Suspense fallback={null}>
         <PresentationControls
           rotation={[0.1, 0.1, 0]}
           global
