@@ -10,7 +10,7 @@ import { mixamoVRMRigMap } from './requireMixamoVRMRigMap.ts';
  */
 //因为我们已经使用react-three/drei的useFBX加载了文件，所以删除官网的加载函数
 export const loadMixamoAnimation = (vrm: any, asset: any) => {
-  const clip = THREE.AnimationClip.findByName(asset.animations, 'mixamo.com'); // extract the AnimationClip
+  const clip = THREE.AnimationClip.findByName(asset.animations, 'mixamo.com').clone(); // extract the AnimationClip
 
   const tracks = [] as any; // KeyframeTracks compatible with VRM will be added here
 
