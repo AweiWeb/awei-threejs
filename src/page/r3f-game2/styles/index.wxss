@@ -1,0 +1,48 @@
+.game2-rf3 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game2-rf3 .game-canvas {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game2-rf3 .game-canvas canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.game2-rf3 .selectBox {
+  position: absolute;
+  left: 10vw;
+  top: 80vh;
+  width: 80vw;
+  height: 15vh;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game2-rf3 .selectBox .imgBox {
+  width: 6vw;
+  height: 10.3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.game2-rf3 .selectBox .imgBox img {
+  width: 6vw;
+  height: 11vh;
+}
+
+.game2-rf3 .selectBox .imgBox:hover {
+  opacity: 1;
+}

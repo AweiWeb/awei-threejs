@@ -1,0 +1,45 @@
+.firework-home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.firework-home .virtul-world {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.firework-home .emitFirework {
+  position: absolute;
+  width: 80vw;
+  top: 78vh;
+  height: 15vh;
+  left: 10vw;
+  z-index: 2;
+  display: flex;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firework-home .emitFirework .btnBox {
+  width: 10vw;
+  height: 5vh;
+  background-color: white;
+  border-radius: 2vw;
+  display: flex;
+  color: black;
+  font-size: 1vw;
+  align-items: center;
+  justify-content: center;
+  transition: all linear 0.4s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.firework-home .emitFirework .btnBox:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}

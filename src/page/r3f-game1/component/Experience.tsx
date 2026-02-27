@@ -22,6 +22,7 @@ const Experience = () => {
   return (
     <>
       {/* 环境光 */}
+      <color args={['black']} attach="background"/>
       <Environment files="/environmentMaps/0/2k.hdr" backgroundIntensity={1} />
       <directionalLight />
       <directionalLight />

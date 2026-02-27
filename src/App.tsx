@@ -4,9 +4,9 @@ import { Outlet } from 'react-router';
 const App = () => {
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}> */}
         <Outlet />
-      </Suspense>
+      {/* </Suspense> */}
     </>
   );
 };

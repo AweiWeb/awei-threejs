@@ -6,12 +6,12 @@ import  { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
  function Ham(props: any) {
-    const { nodes, materials } = useGLTF('/models/ham.glb')
-    console.log(nodes);
+    // const { nodes, materials } = useGLTF('/models/ham.glb')
+    // console.log(nodes);
     
   return (
     <group {...props} dispose={null}>
-      <mesh
+      {/* <mesh
         castShadow
         receiveShadow
         geometry={nodes.物体.geometry}
@@ -42,11 +42,11 @@ import { useGLTF } from '@react-three/drei'
         position={[0, 4.823, 0]}
         rotation={[3.129, 0, 0]}
         scale={[1, 0.61, 1]}
-      />
+      /> */}
     </group>
   )
 }
 
-useGLTF.preload('/models/ham.glb')
+// useGLTF.preload('/models/ham.glb')
 
 export default Ham

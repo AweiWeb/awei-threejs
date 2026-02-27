@@ -1,5 +1,7 @@
 import { Clone, useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 import { RigidBody } from '@react-three/rapier';
+import { useRef } from 'react';
 
 const CyberTruck = () => {
   const cyber = useGLTF('/models/cybtruck.gltf');
